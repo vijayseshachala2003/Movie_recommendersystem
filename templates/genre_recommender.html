@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genre-based Recommender System</title>
+    <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+      }
+
+      h1 {
+          font-size: 36px;
+          margin: 20px 0;
+          color: #333;
+          text-align: center;
+      }
+
+      .genre-buttons {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .genre-button {
+          background-color: #0074d9;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 8px;
+          margin: 10px;
+          font-size: 18px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .genre-button:hover {
+          background-color: #0056b3;
+      }
+      .genre-input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          margin: 10px;
+          font-size: 18px;
+          width: 300px;
+          text-align: center;
+      }
+
+      .genre-submit {
+          background-color: #0074d9;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 8px;
+          font-size: 18px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .genre-submit:hover {
+          background-color: #0056b3;
+    </style>
+  </head>
+  <body>
+    <h1>Genre-based Recommender System</h1>
+    <form method="POST" , action="/genre_recommender">
+      <input
+        class="genre-input"
+        type="text"
+        name="genre"
+        placeholder="Enter the genre of the movie"
+        required
+      />
+      <br />
+      <input class="genre-submit" type="submit" value="Submit" />
+    </form>
+    <
+    <div class="genre-buttons">
+      <button class="genre-button">Animation</button>
+      <button class="genre-button">Comedy</button>
+      <button class="genre-button">Family</button>
+      <button class="genre-button">Adventure</button>
+      <button class="genre-button">Fantasy</button>
+      <button class="genre-button">Romance</button>
+      <button class="genre-button">Drama</button>
+      <button class="genre-button">Action</button>
+      <button class="genre-button">Crime</button>
+      <button class="genre-button">Thriller</button>
+    </div>
+  </body>
+</html>

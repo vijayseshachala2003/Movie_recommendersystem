@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content-based Recommender</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 20px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .content-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 18px;
+        width: 300px;
+        text-align: center;
+      }
+
+      .content-submit {
+        background-color: #0074d9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .content-submit:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Content-based Recommender</h1>
+    <form method="POST" ,action="/content_recommender">
+      <input
+        class="content-input"
+        type="text"
+        name="movie_title"
+        placeholder="Enter the title of the movie"
+        required
+      />
+      <br />
+      <input class="content-submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

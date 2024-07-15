@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion-based Recommender System</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 20px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .emotion-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .emotion-button {
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .emotion-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Emotion-based Recommender System</h1>
+    <form method="POST" action="/emotion_recommender">
+      <input
+        class="emotion-input"
+        type="text"
+        name="movie_title"
+        placeholder="Enter the title of the movie"
+        required
+      />
+      <br />
+      <input class="emotion-submit" type="submit" value="Submit" />
+    </form>
+
+    <div class="emotion-buttons">
+      <button class="emotion-button" onclick="selectEmotion('happy')">
+        Happy
+      </button>
+      <button class="emotion-button" onclick="selectEmotion('sad')">Sad</button>
+      <button class="emotion-button" onclick="selectEmotion('neutral')">
+        Neutral
+      </button>
+      <button class="emotion-button" onclick="selectEmotion('angry')">
+        Angry
+      </button>
+      <button class="emotion-button" onclick="selectEmotion('surprised')">
+        Surprised
+      </button>
+    </div>
+  </body>
+</html>

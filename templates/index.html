@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose a Recommender Systems</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 20px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .recommender-button {
+        background-color: #0074d9;
+        color: white;
+        padding: 50px;
+        border: none;
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .recommender-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Types of Recommender Systems</h1>
+    <div class="buttons-container">
+      <a href="/genre_recommender">
+        <button class="recommender-button" onclick="selectRecommender('genre')">
+          Genre-based Recommender
+        </button>
+      </a>
+      <a href="/emotion_recommender">
+        <button
+          class="recommender-button"
+          onclick="selectRecommender('emotion')"
+        >
+          Emotion-based Recommender
+        </button>
+      </a>
+      <a href="/content_recommender">
+        <button
+          class="recommender-button"
+          onclick="selectRecommender('content')"
+        >
+          Content-based Recommender
+        </button>
+      </a>
+    </div>
+
+    <script>
+      function selectRecommender(type) {
+        // You can handle the selection here, for example, redirect to a specific page based on the type.
+        alert(`You selected ${type}-based Recommender`);
+      }
+    </script>
+  </body>
+</html>

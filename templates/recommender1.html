@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion based Recommendations</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 20px 0;
+        color: #333;
+        text-align: center;
+      }
+
+      .recommendations-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .recommendation-item {
+        background-color: #0074d9;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Emotion-based recommendations are:</h1>
+    <div class="recommendations-container">
+      {% for recommendation in recommendations %}
+      <div class="recommendation-item">{{ recommendation }}</div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
